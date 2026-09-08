@@ -1,16 +1,16 @@
 <?php
 
-namespace Jeffersongoncalves\Stripe\Facades;
+namespace JeffersonGoncalves\Stripe\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Jeffersongoncalves\Stripe\Stripe
+ * @see \JeffersonGoncalves\Stripe\Stripe
  */
 class Stripe extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'laravel-stripe';
+        return \JeffersonGoncalves\Stripe\Stripe::class;
     }
 }

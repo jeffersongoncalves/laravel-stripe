@@ -1,12 +1,18 @@
 {
     "name": "jeffersongoncalves/laravel-stripe",
-    "description": "PHP/Laravel client for the Stripe API: customers, subscriptions, products, prices, checkout sessions, billing portal, invoices, payment intents and webhook signature verification.",
+    "description": "PHP/Laravel client for the Stripe API: customers, subscriptions, products, prices, checkout sessions, billing portal, invoices, payment intents, events and webhook signature verification.",
     "keywords": [
         "laravel",
-        "laravel-stripe"
+        "stripe",
+        "billing",
+        "subscriptions",
+        "payments",
+        "checkout",
+        "api"
     ],
     "homepage": "https://github.com/jeffersongoncalves/laravel-stripe",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Jefferson Simão Gonçalves",
@@ -15,8 +21,9 @@
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^12.0|^13.0"
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
@@ -27,12 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jeffersongoncalves\\Stripe\\": "src/"
+            "JeffersonGoncalves\\Stripe\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jeffersongoncalves\\Stripe\\Tests\\": "tests/"
+            "JeffersonGoncalves\\Stripe\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -52,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jeffersongoncalves\\Stripe\\StripeServiceProvider"
+                "JeffersonGoncalves\\Stripe\\StripeServiceProvider"
             ],
             "aliases": {
-                "Stripe": "Jeffersongoncalves\\Stripe\\Facades\\Stripe"
+                "Stripe": "JeffersonGoncalves\\Stripe\\Facades\\Stripe"
             }
         }
     },
